@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="Lodgeweb — Création de sites vitrines et blogs professionnels. Assistance digitale sur-mesure."/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Lodgeweb — Création de sites vitrines et blogs professionnels.">
 <title>Lodgeweb — Création web premium</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --n:#060606;--n2:#0d0d0d;--n3:#141414;--n4:#1c1c1c;--n5:#242424;
-  --or:#c9a84c;--orc:#e8cc80;
+  --or:#c9a84c;--orc:#e8cc80;--orf:#9a7830;
   --w:#fff;--g:rgba(255,255,255,.45);
   --ft:'Cormorant Garamond',serif;--fb:'Inter',sans-serif;
   --mx:1140px;--ease:.26s cubic-bezier(.4,0,.2,1);
@@ -24,13 +24,15 @@ ul{list-style:none}
 input,textarea,select,button{font-family:inherit}
 .c{max-width:var(--mx);margin:0 auto;padding:0 28px}
 .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;padding:14px 34px;cursor:pointer;transition:var(--ease);border:1px solid transparent}
-.btn-or{background:var(--or);color:var(--n)}.btn-or:hover{background:var(--orc);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.25)}
+.btn-or{background:var(--or);color:var(--n)}.btn-or:hover{background:var(--orc);transform:translateY(-2px)}
 .btn-ghost{background:transparent;color:var(--w);border-color:rgba(255,255,255,.22)}.btn-ghost:hover{border-color:var(--or);color:var(--or);transform:translateY(-2px)}
 .sh{text-align:center;margin-bottom:68px}
 .sh-tag{display:inline-flex;align-items:center;gap:8px;font-size:.67rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--or);border:1px solid rgba(201,168,76,.2);padding:6px 18px;margin-bottom:20px}
 .sh-tag::before{content:'';width:5px;height:5px;background:var(--or);border-radius:50%}
-.sh h2{font-family:var(--ft);font-size:clamp(2.2rem,4vw,3.4rem);font-weight:700;color:var(--w);letter-spacing:.02em;line-height:1.1;margin-bottom:14px}
+.sh h2{font-family:var(--ft);font-size:clamp(2.2rem,4vw,3.4rem);font-weight:700;color:var(--w);line-height:1.1;margin-bottom:14px}
 .sh p{font-size:.91rem;color:var(--g);max-width:450px;margin:0 auto;font-weight:300;line-height:1.85}
+
+/* HEADER */
 #hdr{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .3s,border .3s}
 #hdr.scr{background:rgba(6,6,6,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,168,76,.1)}
 .hdr-in{max-width:var(--mx);margin:0 auto;padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between}
@@ -52,6 +54,8 @@ input,textarea,select,button{font-family:inherit}
 .nav-mob ul{display:flex;flex-direction:column;align-items:center;gap:6px}
 .nav-mob ul li a{font-family:var(--ft);font-size:2.6rem;font-weight:700;color:rgba(255,255,255,.6);padding:10px 40px;display:block;letter-spacing:2px;transition:var(--ease)}
 .nav-mob ul li a:hover{color:var(--or)}
+
+/* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:120px 28px 90px;background:var(--n)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.03) 1px,transparent 1px);background-size:70px 70px;pointer-events:none}
 .hero-grid::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 65% at 50% 50%,transparent 25%,var(--n) 100%)}
@@ -68,6 +72,8 @@ input,textarea,select,button{font-family:inherit}
 .hst span{font-size:.67rem;color:rgba(255,255,255,.37);letter-spacing:.12em;text-transform:uppercase;margin-top:4px;display:block}
 .hst-sep{width:1px;height:44px;background:rgba(201,168,76,.18)}
 .hero-line{position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 10%,rgba(201,168,76,.25) 50%,transparent 90%)}
+
+/* SERVICES */
 #services{padding:110px 0;background:var(--n)}
 .srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.1)}
 .scard{background:var(--n2);padding:50px 36px;position:relative;overflow:hidden;transition:var(--ease)}
@@ -78,24 +84,26 @@ input,textarea,select,button{font-family:inherit}
 .scard p{font-size:.86rem;color:var(--g);line-height:1.82;margin-bottom:22px;font-weight:300}
 .scard-list{display:flex;flex-direction:column;gap:8px;margin-bottom:28px}
 .scard-list li{font-size:.8rem;color:rgba(255,255,255,.48);padding-left:16px;position:relative}
-.scard-list li::before{content:'—';position:absolute;left:0;color:var(--or);font-size:.74rem}
+.scard-list li::before{content:'--';position:absolute;left:0;color:var(--or);font-size:.74rem}
 .scard-lnk{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--or);display:inline-flex;align-items:center;gap:6px;transition:var(--ease)}
 .scard-lnk:hover{gap:12px;color:var(--orc)}
 .scard-ft{background:linear-gradient(145deg,#0f0c02,#1a1403)}
-.scard-ft .scard-n{color:rgba(201,168,76,.12)}
+
+/* REALISATIONS */
 #realisations{padding:110px 0;background:var(--n2);position:relative}
 #realisations::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 10%,rgba(201,168,76,.2) 50%,transparent 90%)}
 .real-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .rcard{background:var(--n3);border:1px solid var(--n5);overflow:hidden;transition:var(--ease)}
-.rcard:hover{border-color:rgba(201,168,76,.28);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.5)}
-.rcard-video{position:relative;padding-bottom:56.25%;height:0;background:var(--n4);overflow:hidden}
-.rcard-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.rcard:hover{border-color:rgba(201,168,76,.28);transform:translateY(-4px)}
+.rcard-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--n4)}
+.rcard-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 .rcard-info{padding:24px 28px}
 .rcard-tag{font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--or);margin-bottom:7px}
 .rcard h3{font-family:var(--ft);font-size:1.3rem;font-weight:700;color:var(--w);margin-bottom:6px}
 .rcard p{font-size:.82rem;color:rgba(255,255,255,.4);font-weight:300;line-height:1.7}
 .real-cta{text-align:center;margin-top:52px}
-.real-note{font-size:.73rem;color:rgba(255,255,255,.25);margin-top:14px;font-style:italic}
+
+/* A PROPOS */
 #apropos{padding:110px 0;background:var(--n)}
 .ap-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
 .ap-left h2{font-family:var(--ft);font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--w);line-height:1.1;margin-bottom:18px}
@@ -109,6 +117,8 @@ input,textarea,select,button{font-family:inherit}
 .chiffre{background:var(--n2);padding:38px 28px;text-align:center}
 .chiffre strong{display:block;font-family:var(--ft);font-size:3.2rem;font-weight:700;color:var(--or);line-height:1;margin-bottom:10px}
 .chiffre span{font-size:.67rem;color:rgba(255,255,255,.37);letter-spacing:.12em;text-transform:uppercase;line-height:1.6;display:block}
+
+/* CONTACT */
 #contact{padding:110px 0;background:var(--n2);position:relative}
 #contact::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 10%,rgba(201,168,76,.2) 50%,transparent 90%)}
 .ct-grid{display:grid;grid-template-columns:1fr 1.45fr;gap:80px;align-items:start}
@@ -116,8 +126,7 @@ input,textarea,select,button{font-family:inherit}
 .ct-info>p{font-size:.88rem;color:var(--g);line-height:1.88;font-weight:300;margin-bottom:44px}
 .ct-items{display:flex;flex-direction:column;gap:18px}
 .cti{display:flex;gap:14px;align-items:flex-start}
-.cti-ico{width:40px;height:40px;border:1px solid rgba(201,168,76,.18);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;transition:var(--ease)}
-.cti:hover .cti-ico{border-color:var(--or);background:rgba(201,168,76,.05)}
+.cti-ico{width:40px;height:40px;border:1px solid rgba(201,168,76,.18);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
 .cti-lb{font-size:.67rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:3px}
 .cti-v{font-size:.88rem;color:var(--w)}.cti-v a{color:var(--or)}.cti-v a:hover{color:var(--orc)}
 .form-wrap{background:var(--n3);border:1px solid var(--n5);padding:42px 38px}
@@ -130,27 +139,38 @@ input,textarea,select,button{font-family:inherit}
 .fg select option{background:var(--n3)}
 .fg textarea{resize:vertical;min-height:108px}
 .sbtn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--or);color:var(--n);border:none;font-weight:600;font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;padding:16px;cursor:pointer;transition:var(--ease);margin-top:4px}
-.sbtn:hover{background:var(--orc);transform:translateY(-1px)}
+.sbtn:hover{background:var(--orc)}
 .form-note{text-align:center;font-size:.7rem;color:rgba(255,255,255,.22);margin-top:11px}
 #formOk{display:none;text-align:center;padding:52px 20px}
-#formOk .ok-ico{font-size:2.4rem;margin-bottom:16px}
 #formOk h3{font-family:var(--ft);font-size:2rem;font-weight:700;color:var(--w);margin-bottom:8px}
 #formOk p{font-size:.87rem;color:var(--g)}
+
+/* FOOTER */
 footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56px 0 0}
 .ft-in{display:grid;grid-template-columns:2fr 1fr 1fr;gap:56px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.04)}
 .flogo{font-family:var(--ft);font-size:1.3rem;font-weight:700;color:var(--w);letter-spacing:4px;display:flex;align-items:center;gap:10px;margin-bottom:16px}
 .flogo span{color:var(--or);font-weight:300}
 .ft-brand p{font-size:.82rem;color:rgba(255,255,255,.32);line-height:1.82;max-width:240px;font-weight:300;margin-bottom:22px}
-.ft-email{font-size:.82rem;color:var(--or);border-bottom:1px solid rgba(201,168,76,.2);padding-bottom:2px;transition:var(--ease)}
+.ft-email{font-size:.82rem;color:var(--or);border-bottom:1px solid rgba(201,168,76,.2);padding-bottom:2px}
 .ft-email:hover{color:var(--orc)}
 .ft-col h4{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:18px}
 .ft-col ul li{margin-bottom:9px}
-.ft-col ul li a{font-size:.82rem;color:rgba(255,255,255,.32);transition:var(--ease);font-weight:300}
+.ft-col ul li a{font-size:.82rem;color:rgba(255,255,255,.32);font-weight:300;transition:var(--ease)}
 .ft-col ul li a:hover{color:var(--or)}
 .ft-bot{padding:18px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .ft-bot p{font-size:.7rem;color:rgba(255,255,255,.18)}
-@media(max-width:1024px){.srv-grid{grid-template-columns:1fr 1fr}.real-grid{grid-template-columns:1fr 1fr}.ap-grid{gap:56px}.ft-in{grid-template-columns:1fr 1fr;gap:36px}}
-@media(max-width:768px){.burg{display:flex}.nav-l{display:none}#hero h1{font-size:2.8rem}.hero-stats{gap:20px}.hst-sep{display:none}.srv-grid{grid-template-columns:1fr}.real-grid{grid-template-columns:1fr}.ap-grid{grid-template-columns:1fr;gap:48px}.ap-right{grid-template-columns:1fr 1fr}.ct-grid{grid-template-columns:1fr;gap:44px}.form-row{grid-template-columns:1fr}.form-wrap{padding:26px 22px}.ft-in{grid-template-columns:1fr;gap:30px}.ft-bot{flex-direction:column;text-align:center}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.srv-grid{grid-template-columns:1fr 1fr}.ap-grid{gap:56px}.ft-in{grid-template-columns:1fr 1fr;gap:36px}}
+@media(max-width:768px){
+  .burg{display:flex}.nav-l{display:none}
+  #hero h1{font-size:2.8rem}.hero-stats{gap:20px}.hst-sep{display:none}
+  .srv-grid,.real-grid{grid-template-columns:1fr}
+  .ap-grid{grid-template-columns:1fr;gap:48px}.ap-right{grid-template-columns:1fr 1fr}
+  .ct-grid{grid-template-columns:1fr;gap:44px}.form-row{grid-template-columns:1fr}
+  .form-wrap{padding:26px 22px}.ft-in{grid-template-columns:1fr;gap:30px}
+  .ft-bot{flex-direction:column;text-align:center}
+}
 @media(max-width:480px){.hero-btns{flex-direction:column;align-items:center}.ap-right{grid-template-columns:1fr}}
 </style>
 </head>
@@ -167,8 +187,8 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
     </a>
     <nav class="nav-l">
       <a href="#services">Services</a>
-      <a href="#realisations">R&#233;alisations</a>
-      <a href="#apropos">&#192; propos</a>
+      <a href="#realisations">R&eacute;alisations</a>
+      <a href="#apropos">&Agrave; propos</a>
       <a href="#contact" class="nav-cta">Devis gratuit</a>
     </nav>
     <button class="burg" id="burg" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -178,8 +198,8 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
 <div class="nav-mob" id="navMob">
   <ul>
     <li><a href="#services">Services</a></li>
-    <li><a href="#realisations">R&#233;alisations</a></li>
-    <li><a href="#apropos">&#192; propos</a></li>
+    <li><a href="#realisations">R&eacute;alisations</a></li>
+    <li><a href="#apropos">&Agrave; propos</a></li>
     <li><a href="#contact">Devis gratuit</a></li>
   </ul>
 </div>
@@ -193,17 +213,17 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
     </svg>
   </div>
   <div class="hero-cnt">
-    <div class="hero-badge">Cr&#233;ation web &middot; Assistance digitale</div>
-    <h1>Votre pr&#233;sence en ligne,<br/><em>taill&#233;e sur-mesure.</em></h1>
-    <p class="hero-sub">Sites vitrines et blogs professionnels pour les entreprises qui veulent se d&#233;marquer &mdash; rapide, accessible, sans compromis.</p>
+    <div class="hero-badge">Cr&eacute;ation web &middot; Assistance digitale</div>
+    <h1>Votre pr&eacute;sence en ligne,<br><em>taill&eacute;e sur-mesure.</em></h1>
+    <p class="hero-sub">Sites vitrines et blogs professionnels pour les entreprises qui veulent se d&eacute;marquer &mdash; rapide, accessible, sans compromis.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn btn-or">Demander un devis</a>
-      <a href="#realisations" class="btn btn-ghost">Voir nos r&#233;alisations</a>
+      <a href="#realisations" class="btn btn-ghost">Voir nos r&eacute;alisations</a>
     </div>
     <div class="hero-stats">
       <div class="hst"><strong>100%</strong><span>Sur-mesure</span></div>
       <div class="hst-sep"></div>
-      <div class="hst"><strong>Rapide</strong><span>D&#233;lai ma&#238;tris&#233;</span></div>
+      <div class="hst"><strong>Rapide</strong><span>D&eacute;lai ma&icirc;tris&eacute;</span></div>
       <div class="hst-sep"></div>
       <div class="hst"><strong>Prix</strong><span>Attractif</span></div>
     </div>
@@ -214,46 +234,46 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
 <section id="services">
   <div class="c">
     <div class="sh">
-      <div class="sh-tag">Ce qu&rsquo;on cr&#233;e</div>
+      <div class="sh-tag">Ce qu&rsquo;on cr&eacute;e</div>
       <h2>Nos Services</h2>
-      <p>Trois expertises compl&#233;mentaires pour construire et d&#233;velopper votre pr&#233;sence digitale.</p>
+      <p>Trois expertises compl&eacute;mentaires pour construire votre pr&eacute;sence digitale.</p>
     </div>
     <div class="srv-grid">
       <div class="scard">
         <div class="scard-n">01</div>
         <h3>Site Vitrine</h3>
-        <p>Un site professionnel qui repr&#233;sente votre activit&#233; 24h/24. Design unique, rapide &#224; charger, optimis&#233; pour convertir vos visiteurs en clients.</p>
+        <p>Un site professionnel qui repr&eacute;sente votre activit&eacute; 24h/24. Design unique, rapide &agrave; charger, optimis&eacute; pour convertir vos visiteurs en clients.</p>
         <ul class="scard-list">
-          <li>Design 100% personnalis&#233;</li>
+          <li>Design 100% personnalis&eacute;</li>
           <li>Responsive mobile &amp; tablette</li>
-          <li>Formulaire de contact int&#233;gr&#233;</li>
-          <li>Optimis&#233; pour Google (SEO)</li>
+          <li>Formulaire de contact int&eacute;gr&eacute;</li>
+          <li>Optimis&eacute; pour Google (SEO)</li>
         </ul>
-        <a href="#contact" class="scard-lnk">D&#233;marrer un projet &#8594;</a>
+        <a href="#contact" class="scard-lnk">D&eacute;marrer un projet &rarr;</a>
       </div>
       <div class="scard scard-ft">
         <div class="scard-n">02</div>
-        <h3>Cr&#233;ation de Blog</h3>
-        <p>Un blog professionnel pour valoriser votre expertise, attirer du trafic organique et fid&#233;liser votre audience avec du contenu de qualit&#233;.</p>
+        <h3>Cr&eacute;ation de Blog</h3>
+        <p>Un blog professionnel pour valoriser votre expertise, attirer du trafic organique et fid&eacute;liser votre audience.</p>
         <ul class="scard-list">
-          <li>Interface d&rsquo;&#233;dition intuitive</li>
-          <li>Cat&#233;gories &amp; articles illimit&#233;s</li>
-          <li>Partage r&#233;seaux sociaux</li>
-          <li>SEO optimis&#233; par article</li>
+          <li>Interface d&rsquo;&eacute;dition intuitive</li>
+          <li>Cat&eacute;gories &amp; articles illimit&eacute;s</li>
+          <li>Partage r&eacute;seaux sociaux</li>
+          <li>SEO optimis&eacute; par article</li>
         </ul>
-        <a href="#contact" class="scard-lnk">D&#233;marrer un projet &#8594;</a>
+        <a href="#contact" class="scard-lnk">D&eacute;marrer un projet &rarr;</a>
       </div>
       <div class="scard">
         <div class="scard-n">03</div>
         <h3>Assistance Digitale</h3>
-        <p>Un accompagnement continu pour g&#233;rer et faire &#233;voluer votre pr&#233;sence en ligne. Vous vous concentrez sur votre m&#233;tier, on s&rsquo;occupe du reste.</p>
+        <p>Un accompagnement continu pour g&eacute;rer et faire &eacute;voluer votre pr&eacute;sence en ligne. Vous vous concentrez sur votre m&eacute;tier.</p>
         <ul class="scard-list">
-          <li>Mise &#224; jour de contenu</li>
-          <li>Support technique r&#233;actif</li>
-          <li>Conseils &amp; strat&#233;gie digitale</li>
+          <li>Mise &agrave; jour de contenu</li>
+          <li>Support technique r&eacute;actif</li>
+          <li>Conseils &amp; strat&eacute;gie digitale</li>
           <li>Suivi des performances</li>
         </ul>
-        <a href="#contact" class="scard-lnk">En savoir plus &#8594;</a>
+        <a href="#contact" class="scard-lnk">En savoir plus &rarr;</a>
       </div>
     </div>
   </div>
@@ -263,34 +283,43 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
   <div class="c">
     <div class="sh">
       <div class="sh-tag">Nos preuves</div>
-      <h2>Nos R&#233;alisations</h2>
-      <p>Des projets concrets, des r&#233;sultats r&#233;els.</p>
+      <h2>Nos R&eacute;alisations</h2>
+      <p>Des projets concrets, des r&eacute;sultats r&eacute;els.</p>
     </div>
     <div class="real-grid">
       <div class="rcard">
         <div class="rcard-video">
-          <iframe src="https://www.youtube.com/embed/UFaoDb6JPA4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/UFaoDb6JPA4?rel=0&modestbranding=1"
+            title="Veloce - Site vitrine"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="rcard-info">
           <p class="rcard-tag">Site vitrine</p>
           <h3>Veloce</h3>
-          <p>Site vitrine professionnel &mdash; design sur-mesure, livr&#233; rapidement.</p>
+          <p>Site vitrine automobile &mdash; design sur-mesure, livr&eacute; rapidement.</p>
         </div>
       </div>
       <div class="rcard">
         <div class="rcard-video">
-          <iframe src="https://www.youtube.com/embed/p8ENM9OJsN0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/p8ENM9OJsN0?rel=0&modestbranding=1"
+            title="Champion Zone - Blog football"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="rcard-info">
           <p class="rcard-tag">Blog professionnel</p>
           <h3>Champion Zone</h3>
-          <p>Blog d&#233;di&#233; au football &mdash; actualit&#233;s, analyses et passion du ballon rond.</p>
+          <p>Blog d&eacute;di&eacute; au football &mdash; actualit&eacute;s, analyses et passion du ballon rond.</p>
         </div>
       </div>
     </div>
     <div class="real-cta">
-      <a href="#contact" class="btn btn-or">Vous voulez le m&#234;me r&#233;sultat&nbsp;?</a>
-      <p class="real-note">Les vid&#233;os n&#233;cessitent une connexion internet</p>
+      <a href="#contact" class="btn btn-or">Vous voulez le m&ecirc;me r&eacute;sultat&nbsp;?</a>
     </div>
   </div>
 </section>
@@ -300,38 +329,38 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
     <div class="ap-grid">
       <div class="ap-left">
         <div class="sh-tag">Pourquoi Lodgeweb</div>
-        <h2>Rapide, accessible<br/><em>et sans prise de t&#234;te.</em></h2>
-        <p>Lodgeweb est une agence digitale pens&#233;e pour les entrepreneurs et petites entreprises qui veulent un site professionnel sans se ruiner ni attendre des mois.</p>
+        <h2>Rapide, accessible<br><em>et sans prise de t&ecirc;te.</em></h2>
+        <p>Lodgeweb est une agence digitale pens&eacute;e pour les entrepreneurs et petites entreprises qui veulent un site professionnel sans se ruiner ni attendre des mois.</p>
         <div class="ap-pts">
           <div class="ap-pt">
             <span class="ap-pt-n">01</span>
             <div class="ap-pt-b">
-              <strong>Rapidit&#233; d&rsquo;ex&#233;cution</strong>
-              <p>Votre site livr&#233; en quelques jours. On respecte vos d&#233;lais, sans compromis sur la qualit&#233;.</p>
+              <strong>Rapidit&eacute; d&rsquo;ex&eacute;cution</strong>
+              <p>Votre site livr&eacute; en quelques jours, sans compromis sur la qualit&eacute;.</p>
             </div>
           </div>
           <div class="ap-pt">
             <span class="ap-pt-n">02</span>
             <div class="ap-pt-b">
               <strong>Prix attractif &amp; transparent</strong>
-              <p>Pas de mauvaises surprises. Devis clair et tarifs adapt&#233;s aux petites structures.</p>
+              <p>Devis clair et tarifs adapt&eacute;s aux petites structures.</p>
             </div>
           </div>
           <div class="ap-pt">
             <span class="ap-pt-n">03</span>
             <div class="ap-pt-b">
               <strong>Assistance digitale continue</strong>
-              <p>On reste disponibles apr&#232;s la livraison. Modifications, conseils, support &mdash; on est l&#224;.</p>
+              <p>On reste disponibles apr&egrave;s la livraison.</p>
             </div>
           </div>
         </div>
-        <a href="#contact" class="btn btn-or">D&#233;marrer un projet</a>
+        <a href="#contact" class="btn btn-or">D&eacute;marrer un projet</a>
       </div>
       <div class="ap-right">
-        <div class="chiffre"><strong>100%</strong><span>Sites livr&#233;s sur-mesure, aucun template g&#233;n&#233;rique</span></div>
-        <div class="chiffre"><strong>48h</strong><span>D&#233;lai de r&#233;ponse maximum apr&#232;s votre demande</span></div>
-        <div class="chiffre"><strong>3&#215;</strong><span>Services&#160;: vitrine, blog et assistance digitale</span></div>
-        <div class="chiffre"><strong>&#8734;</strong><span>Assistance disponible m&#234;me apr&#232;s la livraison</span></div>
+        <div class="chiffre"><strong>100%</strong><span>Sur-mesure, aucun template g&eacute;n&eacute;rique</span></div>
+        <div class="chiffre"><strong>48h</strong><span>D&eacute;lai de r&eacute;ponse maximum</span></div>
+        <div class="chiffre"><strong>3&times;</strong><span>Services compl&eacute;mentaires</span></div>
+        <div class="chiffre"><strong>&infin;</strong><span>Assistance apr&egrave;s livraison</span></div>
       </div>
     </div>
   </div>
@@ -342,21 +371,20 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
     <div class="ct-grid">
       <div class="ct-info">
         <div class="sh-tag">Travaillons ensemble</div>
-        <h2>D&#233;marrons votre<br/><em>projet d&#232;s aujourd&rsquo;hui.</em></h2>
-        <p>D&#233;crivez-nous votre projet, on vous r&#233;pond dans les 48h avec un devis gratuit et sans engagement.</p>
+        <h2>D&eacute;marrons votre<br><em>projet d&egrave;s aujourd&rsquo;hui.</em></h2>
+        <p>D&eacute;crivez-nous votre projet, on vous r&eacute;pond dans les 48h avec un devis gratuit.</p>
         <div class="ct-items">
           <div class="cti">
-            <div class="cti-ico">&#9993;&#65039;</div>
+            <div class="cti-ico">&#9993;</div>
             <div>
               <p class="cti-lb">Email</p>
-              <!-- Email en entités HTML — Netlify ne peut pas le masquer -->
-              <p class="cti-v"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#111;&#100;&#103;&#101;&#119;&#101;&#98;&#102;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#108;&#111;&#100;&#103;&#101;&#119;&#101;&#98;&#102;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+              <p class="cti-v"><a href="mailto:lodgewebfr@gmail.com">lodgewebfr&#64;gmail&#46;com</a></p>
             </div>
           </div>
           <div class="cti">
             <div class="cti-ico">&#9200;</div>
             <div>
-              <p class="cti-lb">D&#233;lai de r&#233;ponse</p>
+              <p class="cti-lb">D&eacute;lai de r&eacute;ponse</p>
               <p class="cti-v">Moins de 48h</p>
             </div>
           </div>
@@ -371,30 +399,29 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
       </div>
       <div>
         <div class="form-wrap">
-          <!-- Netlify Forms : data-netlify="true" envoie les messages sur votre Gmail -->
           <form id="contactForm" name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact"/>
+            <input type="hidden" name="form-name" value="contact">
             <div class="form-row">
               <div class="fg">
                 <label>Nom complet *</label>
-                <input type="text" name="nom" placeholder="Jean Dupont" required/>
+                <input type="text" name="nom" placeholder="Jean Dupont" required>
               </div>
               <div class="fg">
                 <label>Email *</label>
-                <input type="email" name="email" placeholder="jean@email.fr" required/>
+                <input type="email" name="email" placeholder="jean@email.fr" required>
               </div>
             </div>
             <div class="form-row">
               <div class="fg">
-                <label>T&#233;l&#233;phone</label>
-                <input type="tel" name="telephone" placeholder="06 00 00 00 00"/>
+                <label>T&eacute;l&eacute;phone</label>
+                <input type="tel" name="telephone" placeholder="06 00 00 00 00">
               </div>
               <div class="fg">
-                <label>Service souhait&#233;</label>
+                <label>Service souhait&eacute;</label>
                 <select name="service">
                   <option value="">Choisissez...</option>
-                  <option>Cr&#233;ation site vitrine</option>
-                  <option>Cr&#233;ation blog</option>
+                  <option>Cr&eacute;ation site vitrine</option>
+                  <option>Cr&eacute;ation blog</option>
                   <option>Assistance digitale</option>
                   <option>Autre</option>
                 </select>
@@ -402,17 +429,14 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
             </div>
             <div class="fg">
               <label>Votre projet *</label>
-              <textarea name="message" placeholder="D&#233;crivez bri&#232;vement votre projet..." required></textarea>
+              <textarea name="message" placeholder="D&eacute;crivez votre projet..." required></textarea>
             </div>
-            <button type="submit" class="sbtn">
-              Envoyer ma demande
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            </button>
-            <p class="form-note">R&#233;ponse garantie sous 48h &middot; Devis 100% gratuit</p>
+            <button type="submit" class="sbtn">Envoyer ma demande &rarr;</button>
+            <p class="form-note">R&eacute;ponse garantie sous 48h &middot; Devis 100% gratuit</p>
           </form>
           <div id="formOk">
-            <div class="ok-ico">&#10003;</div>
-            <h3>Message re&#231;u&#160;!</h3>
+            <div style="font-size:2.4rem;margin-bottom:16px">&#10003;</div>
+            <h3>Message re&ccedil;u !</h3>
             <p>Merci pour votre demande. Je vous recontacte dans les 48h.</p>
           </div>
         </div>
@@ -432,15 +456,15 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
           </svg>
           LODGE<span>WEB</span>
         </div>
-        <p>Cr&#233;ation de sites vitrines et blogs professionnels. Assistance digitale sur-mesure.</p>
-        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#111;&#100;&#103;&#101;&#119;&#101;&#98;&#102;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" class="ft-email">&#108;&#111;&#100;&#103;&#101;&#119;&#101;&#98;&#102;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>
+        <p>Cr&eacute;ation de sites vitrines et blogs professionnels. Assistance digitale sur-mesure.</p>
+        <a href="mailto:lodgewebfr@gmail.com" class="ft-email">lodgewebfr&#64;gmail&#46;com</a>
       </div>
       <div class="ft-col">
         <h4>Navigation</h4>
         <ul>
           <li><a href="#services">Nos Services</a></li>
-          <li><a href="#realisations">R&#233;alisations</a></li>
-          <li><a href="#apropos">&#192; propos</a></li>
+          <li><a href="#realisations">R&eacute;alisations</a></li>
+          <li><a href="#apropos">&Agrave; propos</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -448,68 +472,28 @@ footer{background:var(--n);border-top:1px solid rgba(201,168,76,.08);padding:56p
         <h4>Services</h4>
         <ul>
           <li><a href="#services">Site vitrine</a></li>
-          <li><a href="#services">Cr&#233;ation de blog</a></li>
+          <li><a href="#services">Cr&eacute;ation de blog</a></li>
           <li><a href="#services">Assistance digitale</a></li>
           <li><a href="#contact">Devis gratuit</a></li>
         </ul>
       </div>
     </div>
     <div class="ft-bot">
-      <p>&#169; 2024 Lodgeweb &mdash; Tous droits r&#233;serv&#233;s</p>
-      <p>&#108;&#111;&#100;&#103;&#101;&#119;&#101;&#98;&#102;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</p>
+      <p>&copy; 2025 Lodgeweb &mdash; Tous droits r&eacute;serv&eacute;s</p>
+      <p>lodgewebfr&#64;gmail&#46;com</p>
     </div>
   </div>
 </footer>
 
 <script>
-var hdr = document.getElementById('hdr');
-window.addEventListener('scroll', function() {
-  hdr.classList.toggle('scr', window.scrollY > 20);
-}, {passive:true});
-
-var burg = document.getElementById('burg');
-var navMob = document.getElementById('navMob');
-burg.addEventListener('click', function() {
-  burg.classList.toggle('on');
-  navMob.classList.toggle('on');
-  document.body.style.overflow = navMob.classList.contains('on') ? 'hidden' : '';
-});
-document.querySelectorAll('.nav-mob a').forEach(function(a) {
-  a.addEventListener('click', function() {
-    burg.classList.remove('on');
-    navMob.classList.remove('on');
-    document.body.style.overflow = '';
-  });
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-  a.addEventListener('click', function(e) {
-    var t = document.querySelector(a.getAttribute('href'));
-    if (!t) return;
-    e.preventDefault();
-    window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY - 80, behavior:'smooth'});
-  });
-});
-
-// Formulaire — Netlify Forms (fonctionne uniquement en ligne sur Netlify)
-var form = document.getElementById('contactForm');
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  var btn = form.querySelector('.sbtn');
-  btn.textContent = 'Envoi en cours...';
-  btn.disabled = true;
-  fetch('/', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    body: new URLSearchParams(new FormData(form)).toString()
-  }).then(function() {
-    form.style.display = 'none';
-    document.getElementById('formOk').style.display = 'block';
-  }).catch(function() {
-    btn.textContent = 'Envoyer ma demande';
-    btn.disabled = false;
-  });
-});
+var hdr=document.getElementById('hdr');
+window.addEventListener('scroll',function(){hdr.classList.toggle('scr',window.scrollY>20);},{passive:true});
+var burg=document.getElementById('burg'),navMob=document.getElementById('navMob');
+burg.addEventListener('click',function(){burg.classList.toggle('on');navMob.classList.toggle('on');document.body.style.overflow=navMob.classList.contains('on')?'hidden':'';});
+document.querySelectorAll('.nav-mob a').forEach(function(a){a.addEventListener('click',function(){burg.classList.remove('on');navMob.classList.remove('on');document.body.style.overflow='';});});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});});});
+var form=document.getElementById('contactForm');
+if(form){form.addEventListener('submit',function(e){e.preventDefault();var btn=form.querySelector('.sbtn');btn.textContent='Envoi...';btn.disabled=true;setTimeout(function(){form.style.display='none';document.getElementById('formOk').style.display='block';},900);});}
 </script>
 </body>
 </html>
